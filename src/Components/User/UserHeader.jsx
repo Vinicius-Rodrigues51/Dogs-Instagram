@@ -8,8 +8,15 @@ const UserHeader = () => {
   const location = useLocation();
 
   React.useEffect(() => {
-    if ("/conta/estatisticas" === location.pathname) {
-      setTitle("Estatísticas"); // setar os outros titulos
+    switch (location.pathname) {
+      case "/conta/postar":
+        setTitle("Poste sua foto");
+        break;
+      case "/conta/estatisticas":
+        setTitle("Estatísticas");
+        break;
+      default:
+        setTitle("Minha conta");
     }
   }, [location]);
   return (
