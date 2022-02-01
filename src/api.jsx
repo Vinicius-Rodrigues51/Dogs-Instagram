@@ -41,7 +41,7 @@ export function USER_POST(body) {
   return {
     url: API_URL + "/api/user",
     options: {
-      method: "post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
