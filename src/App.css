@@ -4,14 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 body {
   color: #333;
-  --type-first: Halvetica, Arial, sans-serif;
+  --type-first: Helvetica, Arial, sans-serif;
   --type-second: "Spectral", Georgia;
-  font-family: --var(--type-first);
+  font-family: var(--type-first);
   padding-top: 4rem;
 }
 
@@ -29,7 +29,7 @@ button,
 input {
   display: block;
   font-size: 1rem;
-  font-family: --var(--type-first);
+  font-family: var(--type-first);
   color: #333;
 }
 
@@ -51,7 +51,7 @@ a {
 .title {
   font-family: var(--type-second);
   line-height: 1;
-  font-size: 3rem;
+  font-size: 3rem !important;
   margin: 1rem 0;
   position: relative;
   z-index: 1;

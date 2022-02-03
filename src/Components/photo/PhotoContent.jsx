@@ -14,16 +14,16 @@ const PhotoContent = ({ data }) => {
 
       <div className={styles.details}>
         <div>
-          <p>
+          <p className={styles.author}>
             <Link to={`/perfil/${photo.author}`}>@${photo.author}</Link>
-            <span className={styles.vizualizacoes}>{photo.acessos}</span>
+            <span className={styles.visualizacoes}>{photo.acessos}</span>
           </p>
           <h1 className="title">
             <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
           </h1>
           <ul className={styles.attributes}>
             <li>{`${photo.peso} Kg`}</li>
-            <li>{`${photo.idade} ${photo.idade === 1 ? "ano" : "anos"}`}</li>
+            <li>{`${photo.idade} ${photo.idade <= 1 ? "ano" : "anos"}`}</li>
           </ul>
         </div>
       </div>
