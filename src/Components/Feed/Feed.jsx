@@ -49,6 +49,32 @@ const Feed = ({ user }) => {
           setInfinite={setInfinite}
         />
       ))}
+      {infinite && (
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "2rem",
+            color: "rgba(0,0,0,.5)",
+          }}
+        >
+          Carregando publicações
+        </p>
+      )}
+      {!infinite && (
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "2rem",
+            color: "rgba(0,0,0,.5)",
+          }}
+        >
+          Não existem mais publicações
+        </p>
+      )}
     </div>
   );
 };
