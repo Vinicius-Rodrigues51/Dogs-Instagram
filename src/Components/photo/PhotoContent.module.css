@@ -67,6 +67,10 @@
   display: inline-block;
 }
 
+.single .visualizacoes {
+  padding-right: 10rem;
+}
+
 .attributes {
   display: flex;
   font-size: 1.125rem;
@@ -101,5 +105,9 @@
 
   .img {
     grid-row: 1;
+  }
+
+  .single .visualizacoes {
+    padding-right: 0;
   }
 }
