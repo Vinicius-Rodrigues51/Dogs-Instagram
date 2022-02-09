@@ -4,6 +4,7 @@ import { userContext } from "../../userContext";
 import { ReactComponent as MinhasFotos } from "../../Assets/feed.svg";
 import { ReactComponent as Estatisticas } from "../../Assets/estatisticas.svg";
 import { ReactComponent as AdicionarFoto } from "../../Assets/adicionar.svg";
+import { ReactComponent as Home } from "../../Assets/Home2.svg";
 import { ReactComponent as Sair } from "../../Assets/sair.svg";
 import styles from "./UserHeaderNav.module.css";
 import useMedia from "../../Hooks/useMedia";
@@ -33,6 +34,9 @@ const UserHeaderNav = () => {
           mobileMenu && styles.navMobileActive
         }`}
       >
+        <NavLink to="/" end>
+          <Home title="Feed" /> {mobile && "Home"}
+        </NavLink>
         <NavLink to="/conta" end>
           <MinhasFotos title="Minhas fotos" /> {mobile && "Minhas Fotos"}
         </NavLink>
